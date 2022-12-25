@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import cpus from "../data/cpus";
-import gpus from "../data/gpus";
-import motherboards from "../data/motherboards";
+import parts from "../data/partsData";
 
 const createItem = (items, type) => {
   return items.map((item) => {
@@ -16,9 +14,9 @@ const createItem = (items, type) => {
   });
 };
 
-const cpuItems = createItem(cpus.cpus, "cpu");
-const moboItems = createItem(motherboards.motherboards, "mobo");
-const gpuItems = createItem(gpus.gpus, "gpu");
+const cpuItems = createItem(parts.cpu, "cpu");
+const moboItems = createItem(parts.mobo, "mobo");
+const gpuItems = createItem(parts.gpu, "gpu");
 
 function Shop() {
   return (

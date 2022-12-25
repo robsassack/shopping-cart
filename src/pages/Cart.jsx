@@ -1,7 +1,7 @@
 function Cart() {
   return (
     <div>
-      <h1>Cart Page</h1>
+      <h1>Shopping Cart</h1>
     </div>
   );
 }
