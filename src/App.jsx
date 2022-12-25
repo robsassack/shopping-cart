@@ -2,6 +2,7 @@ import { NavLink, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
+import Item from "./pages/Item";
 import NotFound from "./pages/NotFound";
 import "./App.css";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/shop/:type/:id' element={<Item />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
