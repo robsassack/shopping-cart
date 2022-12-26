@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import parts from "../data/partsData";
 
-function Item() {
+function Item(props) {
   const params = useParams();
   const { type, id } = params;
   const item = parts[type].find((item) => item.id === id);
@@ -10,7 +10,9 @@ function Item() {
     <div>
       <h1>{item.name}</h1>
       <p>${item.price}</p>
-      <Link to='/cart'><button>Add to cart</button></Link>
+      <Link to='/cart'>
+        <button onClick={() => props.addToCart(item)}>Add to cart</button>
+      </Link>
     </div>
   );
 }
