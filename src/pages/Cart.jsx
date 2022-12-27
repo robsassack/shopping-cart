@@ -27,6 +27,7 @@ function Cart(props) {
         </li>
         <button onClick={() => props.addToCart(item)}>+</button>
         <button onClick={() => props.removeFromCart(item)}>-</button>
+        <button onClick={() => props.removeItem(item)}>X</button>
       </div>
     );
   });
@@ -36,6 +37,7 @@ function Cart(props) {
       <h1>Shopping Cart</h1>
       <ul>{displayCart}</ul>
       <h2>Total: ${total}</h2>
+      <button>Checkout</button>
     </div>
   );
 }

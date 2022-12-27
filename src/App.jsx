@@ -31,8 +31,7 @@ function App() {
   function removeFromCart(item) {
     const exists = cart.find((cartItem) => cartItem.id === item.id);
     if (exists.quantity === 1) {
-      const updatedCart = cart.filter((cartItem) => cartItem.id !== item.id);
-      setCart(updatedCart);
+      removeItem(item);
     } else {
       const updatedCart = cart.map((cartItem) => {
         if (cartItem.id === item.id) {
@@ -43,6 +42,11 @@ function App() {
       });
       setCart(updatedCart);
     }
+  }
+
+  function removeItem(item) {
+    const updatedCart = cart.filter((cartItem) => cartItem.id !== item.id);
+    setCart(updatedCart);
   }
 
   function numberInCart() {
@@ -78,6 +82,7 @@ function App() {
               cart={cart}
               addToCart={addToCart}
               removeFromCart={removeFromCart}
+              removeItem={removeItem}
             />
           }
         />
