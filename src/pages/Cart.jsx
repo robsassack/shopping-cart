@@ -35,9 +35,17 @@ function Cart(props) {
   return (
     <div>
       <h1>Shopping Cart</h1>
-      <ul>{displayCart}</ul>
-      <h2>Total: ${total}</h2>
-      <button>Checkout</button>
+      {props.cart.length === 0 ? (
+        <>
+          <p>Your cart is empty</p>
+        </>
+      ) : (
+        <>
+          <ul>{displayCart}</ul>
+          <h2>Total: ${total}</h2>
+          <button>Checkout</button>
+        </>
+      )}
     </div>
   );
 }

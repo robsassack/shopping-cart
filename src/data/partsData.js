@@ -25,8 +25,8 @@ export default {
       type: "cpu",
     },
     {
-      name: "AMD Ryzen 7 7900X",
-      id: "amd-ryzen-7-7900x",
+      name: "AMD Ryzen 7 7700X",
+      id: "amd-ryzen-7-7700x",
       price: 399.99,
       type: "cpu",
     },
