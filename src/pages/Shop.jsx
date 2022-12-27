@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import parts from "../data/partsData";
 
-const createItem = (items, type) => {
+const createItem = (items) => {
   return items.map((item) => {
     return (
       <div key={item.id}>
-        <Link to={`/shop/${type}/${item.id}`} state={{ item: item }}>
+        <Link to={`/shop/${item.type}/${item.id}`} state={{ item: item }}>
           {item.name}
         </Link>
         <p>{item.price}</p>
@@ -14,17 +14,13 @@ const createItem = (items, type) => {
   });
 };
 
-const cpuItems = createItem(parts.cpu, "cpu");
-const moboItems = createItem(parts.mobo, "mobo");
-const gpuItems = createItem(parts.gpu, "gpu");
+const displayItems = createItem(parts.list);
 
 function Shop() {
   return (
     <div>
       <h1>Shop Page</h1>
-      {cpuItems}
-      {moboItems}
-      {gpuItems}
+      {displayItems}
     </div>
   );
 }

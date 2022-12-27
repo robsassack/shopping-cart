@@ -3,8 +3,7 @@ import parts from "../data/partsData";
 
 function Item(props) {
   const params = useParams();
-  const { type, id } = params;
-  const item = parts[type].find((item) => item.id === id);
+  const item = parts.list.find((item) => item.id === params.id);
 
   return (
     <div>

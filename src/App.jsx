@@ -11,9 +11,22 @@ function App() {
   const [cart, setCart] = useState([]);
 
   function addToCart(item) {
-    setCart((prevState) => {
-      return [...prevState, item];
-    });
+    const exists = cart.find((cartItem) => cartItem.id === item.id);
+
+    if (exists) {
+      const updatedCart = cart.map((cartItem) => {
+        if (cartItem.id === item.id) {
+          return { ...cartItem, quantity: cartItem.quantity + 1 };
+        } else {
+          return cartItem;
+        }
+      });
+      setCart(updatedCart);
+    } else {
+      setCart((prevState) => {
+        return [...prevState, {id: item.id, quantity: 1}];
+      });
+    }
   }
 
   return (
