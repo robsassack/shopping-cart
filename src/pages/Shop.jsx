@@ -8,7 +8,7 @@ const createItem = (items) => {
         <Link to={`/shop/${item.type}/${item.id}`} state={{ item: item }}>
           {item.name}
         </Link>
-        <p>{item.price}</p>
+        <p>${item.price}</p>
       </div>
     );
   });

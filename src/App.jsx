@@ -12,7 +12,6 @@ function App() {
 
   function addToCart(item) {
     const exists = cart.find((cartItem) => cartItem.id === item.id);
-
     if (exists) {
       const updatedCart = cart.map((cartItem) => {
         if (cartItem.id === item.id) {
@@ -24,9 +23,34 @@ function App() {
       setCart(updatedCart);
     } else {
       setCart((prevState) => {
-        return [...prevState, {id: item.id, quantity: 1}];
+        return [...prevState, { id: item.id, quantity: 1 }];
       });
     }
+  }
+
+  function removeFromCart(item) {
+    const exists = cart.find((cartItem) => cartItem.id === item.id);
+    if (exists.quantity === 1) {
+      const updatedCart = cart.filter((cartItem) => cartItem.id !== item.id);
+      setCart(updatedCart);
+    } else {
+      const updatedCart = cart.map((cartItem) => {
+        if (cartItem.id === item.id) {
+          return { ...cartItem, quantity: cartItem.quantity - 1 };
+        } else {
+          return cartItem;
+        }
+      });
+      setCart(updatedCart);
+    }
+  }
+
+  function numberInCart() {
+    let number = 0;
+    cart.forEach((item) => {
+      number += item.quantity;
+    });
+    return number;
   }
 
   return (
@@ -40,14 +64,23 @@ function App() {
             <NavLink to='/shop'>Shop</NavLink>
           </li>
           <li>
-            <NavLink to='/cart'>Cart</NavLink>
+            <NavLink to='/cart'>Cart ({numberInCart()})</NavLink>
           </li>
         </ul>
       </nav>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
-        <Route path='/cart' element={<Cart cart={cart}/>} />
+        <Route
+          path='/cart'
+          element={
+            <Cart
+              cart={cart}
+              addToCart={addToCart}
+              removeFromCart={removeFromCart}
+            />
+          }
+        />
         <Route
           path='/shop/:type/:id'
           element={<Item addToCart={addToCart} />}
