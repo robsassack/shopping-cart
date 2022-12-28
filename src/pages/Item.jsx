@@ -7,6 +7,7 @@ function Item(props) {
 
   return (
     <div>
+      <img src={item.image} alt={item.name} className="item--image" />
       <h1>{item.name}</h1>
       <p>${item.price}</p>
       <Link to='/cart'>

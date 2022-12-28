@@ -60,3 +60,7 @@ button {
 .shop--item img {
   height: 150px;
 }
+
+.item--image {
+  max-height: 300px;
+}
