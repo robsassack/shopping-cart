@@ -59,17 +59,25 @@ function App() {
 
   return (
     <div className='App'>
-      <nav>
+      <nav className='App--navbar'>
         <ul>
-          <li>
-            <NavLink to='/'>Computer World</NavLink>
-          </li>
-          <li>
-            <NavLink to='/shop'>Shop</NavLink>
-          </li>
-          <li>
-            <NavLink to='/cart'>Cart ({numberInCart()})</NavLink>
-          </li>
+          <div className='App--logo'>
+            <li>
+              <NavLink to='/'>
+                <i className='fa-solid fa-globe'></i> Computer World
+              </NavLink>
+            </li>
+          </div>
+          <div className='App--links'>
+            <li>
+              <NavLink to='/shop'>Shop</NavLink>
+            </li>
+            <li>
+              <NavLink to='/cart'>
+                <i className='fa-solid fa-cart-shopping'></i> ({numberInCart()})
+              </NavLink>
+            </li>
+          </div>
         </ul>
       </nav>
       <Routes>
