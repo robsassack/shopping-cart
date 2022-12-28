@@ -4,12 +4,16 @@ import parts from "../data/partsData";
 const createItem = (items) => {
   return items.map((item) => {
     return (
-      <div key={item.id}>
-        <Link to={`/shop/${item.type}/${item.id}`} state={{ item: item }}>
-          {item.name}
-        </Link>
+      <Link
+        key={item.id}
+        className='shop--item'
+        to={`/shop/${item.type}/${item.id}`}
+        state={{ item: item }}
+      >
+        <img src={item.image} alt={item.name} />
+        {item.name}
         <p>${item.price}</p>
-      </div>
+      </Link>
     );
   });
 };
@@ -20,7 +24,9 @@ function Shop() {
   return (
     <div>
       <h1>Shop Page</h1>
-      {displayItems}
+      <div className="shop--items-container">
+        {displayItems}
+      </div>
     </div>
   );
 }

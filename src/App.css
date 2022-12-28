@@ -2,3 +2,21 @@
   padding: 0;
   margin: 0;
 }
+
+.shop--items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.shop--item {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  border: 1px solid black;
+}
+
+.shop--item img {
+  height: 150px;
+}
