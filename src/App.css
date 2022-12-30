@@ -61,6 +61,31 @@ button {
   height: 150px;
 }
 
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.item--info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.item--info p {
+  font-size: 1.5em;
+}
+
+.item--info button {
+  padding: 10px 20px;
+}
+
 .item--image {
   max-height: 300px;
+  max-width: 350px;
 }
