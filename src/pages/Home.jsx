@@ -1,10 +1,17 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+import photo from "../assets/nasa-Q1p7bh3SHj8-unsplash.jpg";
 
 function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <NavLink to='/shop'><button>Go to Shop</button></NavLink>
+    <div className="home">
+      <img src={photo} alt='Photo of Earth' className="home--image" />
+      <div className='home--text'>
+        <h1>Welcome to Computer World!</h1>
+        <p>All of the newest computer parts for the best prices!</p>
+        <NavLink to='/shop'>
+          <button className="home--button">Go to Shop</button>
+        </NavLink>
+      </div>
     </div>
   );
 }
