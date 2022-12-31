@@ -19,7 +19,7 @@ button {
   font-size: 1.5rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   padding: 15px 40px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .App--navbar ul {
@@ -88,4 +88,54 @@ button {
 .item--image {
   max-height: 300px;
   max-width: 350px;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.cart--item {
+  display: flex;
+  align-items: center;
+  max-width: 450px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  padding: 10px 0;
+  margin: 0 30px;
+}
+
+.cart--image {
+  max-height: 80px;
+  max-width: 80px;
+}
+
+.cart--name {
+  font-size: 1.2em;
+}
+
+.cart--info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.cart--quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart--delete {
+  background-color: rgb(204, 0, 0);
+}
+
+.cart--checkout {
+  background-color: rgb(0, 204, 0);
+}
+
+.cart--empty {
+  font-size: 1.5em;
 }
