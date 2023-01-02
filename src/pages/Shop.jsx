@@ -10,8 +10,10 @@ const createItem = (items) => {
         to={`/shop/${item.type}/${item.id}`}
         state={{ item: item }}
       >
-        <img src={item.image} alt={item.name} />
-        {item.name}
+        <div className='shop--img-container'>
+          <img src={item.image} alt={item.name} />
+        </div>
+        <strong>{item.name}</strong>
         <p>${item.price}</p>
       </Link>
     );
@@ -22,11 +24,9 @@ const displayItems = createItem(parts.list);
 
 function Shop() {
   return (
-    <div>
+    <div className='shop'>
       <h1>Shop Page</h1>
-      <div className="shop--items-container">
-        {displayItems}
-      </div>
+      <div className='shop--items-container'>{displayItems}</div>
     </div>
   );
 }
