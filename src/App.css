@@ -14,6 +14,17 @@ button {
   font-size: 1rem;
 }
 
+button:hover {
+  background-color: #333;
+  border: 1px solid #333;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: #111;
+}
+
 .App--navbar {
   background-color: #1a1a1a;
   font-size: 1.5rem;
@@ -107,6 +118,11 @@ button {
 .shop--item:hover {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   color: blue;
+  transform: scale(1.05);
+}
+
+.shop--item:active {
+  transform: scale(0.95);
 }
 
 .shop--img-container {
@@ -190,11 +206,27 @@ button {
 }
 
 .cart--delete {
-  background-color: rgb(204, 0, 0);
+  background-color: rgb(204, 0, 0) !important;
+}
+
+.cart--delete:hover {
+  background-color: rgb(255, 0, 0) !important;
+}
+
+.cart--delete:active {
+  background-color: rgb(153, 0, 0) !important;
 }
 
 .cart--checkout {
-  background-color: rgb(0, 204, 0);
+  background-color: rgb(0, 204, 0) !important;
+}
+
+.cart--checkout:hover {
+  background-color: rgb(0, 255, 0) !important;
+}
+
+.cart--checkout:active {
+  background-color: rgb(0, 153, 0) !important;
 }
 
 .cart--empty {
