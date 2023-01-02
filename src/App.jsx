@@ -81,9 +81,10 @@ function App() {
         </ul>
       </nav>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/shop' element={<Shop />} />
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/shop' element={<Shop />} />
         <Route
+          exact
           path='/cart'
           element={
             <Cart
@@ -95,10 +96,11 @@ function App() {
           }
         />
         <Route
+          exact
           path='/shop/:type/:id'
           element={<Item addToCart={addToCart} />}
         />
-        <Route path='*' element={<NotFound />} />
+        <Route exact path='*' element={<NotFound />} />
       </Routes>
     </div>
   );
