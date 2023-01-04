@@ -23,6 +23,8 @@ const createItem = (items) => {
 const displayItems = createItem(parts.list);
 
 function Shop() {
+  document.title = "Computer World - Shop";
+
   return (
     <div className='shop'>
       <h1>Shop Page</h1>

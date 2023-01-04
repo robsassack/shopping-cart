@@ -4,6 +4,7 @@ import parts from "../data/partsData";
 function Item(props) {
   const params = useParams();
   const item = parts.list.find((item) => item.id === params.id);
+  document.title = `Computer World - ${item.name}`;
 
   return (
     <div className='item'>

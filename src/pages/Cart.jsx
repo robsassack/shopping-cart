@@ -3,6 +3,7 @@ import parts from "../data/partsData";
 
 function Cart(props) {
   const [total, setTotal] = useState(0);
+  document.title = "Computer World - Shopping Cart";
 
   function getTotal() {
     let total = 0;
