@@ -1,0 +1,171 @@
+// Vitest Snapshot v1
+
+exports[`App > render app 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <nav
+      class="App--navbar"
+    >
+      <ul>
+        <div
+          class="App--logo"
+        >
+          <li>
+            <a
+              aria-current="page"
+              class="active"
+              href="/"
+            >
+              <i
+                class="fa-solid fa-globe"
+              />
+               Computer World
+            </a>
+          </li>
+        </div>
+        <div
+          class="App--links"
+        >
+          <li>
+            <a
+              class=""
+              href="/shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li>
+            <a
+              class=""
+              href="/cart"
+            >
+              <i
+                class="fa-solid fa-cart-shopping"
+              />
+               (
+              0
+              )
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <div
+      class="home"
+    >
+      <img
+        alt="Photo of Earth"
+        class="home--image"
+        src="/shopping-cart/src/assets/nasa-Q1p7bh3SHj8-unsplash.jpg"
+      />
+      <div
+        class="home--text"
+      >
+        <h1>
+          Welcome to Computer World!
+        </h1>
+        <p>
+          All of the newest computer parts for the best prices!
+        </p>
+        <a
+          class=""
+          href="/shop"
+        >
+          <button
+            class="home--button"
+          >
+            Go to Shop
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App > render page 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <nav
+      class="App--navbar"
+    >
+      <ul>
+        <div
+          class="App--logo"
+        >
+          <li>
+            <a
+              aria-current="page"
+              class="active"
+              href="/"
+            >
+              <i
+                class="fa-solid fa-globe"
+              />
+               Computer World
+            </a>
+          </li>
+        </div>
+        <div
+          class="App--links"
+        >
+          <li>
+            <a
+              class=""
+              href="/shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li>
+            <a
+              class=""
+              href="/cart"
+            >
+              <i
+                class="fa-solid fa-cart-shopping"
+              />
+               (
+              0
+              )
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <div
+      class="home"
+    >
+      <img
+        alt="Photo of Earth"
+        class="home--image"
+        src="/shopping-cart/src/assets/nasa-Q1p7bh3SHj8-unsplash.jpg"
+      />
+      <div
+        class="home--text"
+      >
+        <h1>
+          Welcome to Computer World!
+        </h1>
+        <p>
+          All of the newest computer parts for the best prices!
+        </p>
+        <a
+          class=""
+          href="/shop"
+        >
+          <button
+            class="home--button"
+          >
+            Go to Shop
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
