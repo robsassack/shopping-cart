@@ -10,4 +10,21 @@ describe("App", () => {
     const { container } = render(<App />, { wrapper: BrowserRouter });
     expect(container).toMatchSnapshot();
   });
+
+  it("render shop page", async () => {
+    render(<App />, { wrapper: BrowserRouter });
+    await userEvent.click(screen.getByRole("link", { name: /Go to Shop/i }));
+    expect(screen.getByRole("heading").textContent).toMatch(
+      /Shop Page/i
+    );
+  });
+
+  it("render item page", async () => {
+    render(<App />, { wrapper: BrowserRouter });
+    await userEvent.click(screen.getByRole("link", { name: /Intel Core i9-13900K/i }));
+    expect(screen.getByRole("heading").textContent).toMatch(
+      /Intel Core i9-13900K/i
+    );
+    // screen.debug();
+  });
 });
