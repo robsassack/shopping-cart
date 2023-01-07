@@ -49,7 +49,7 @@ function Cart(props) {
       ) : (
         <>
           <ul>{displayCart}</ul>
-          <h2>Total: ${total}</h2>
+          <h2 className="cart--total">Total: ${total}</h2>
           <button className="cart--checkout">Checkout</button>
         </>
       )}

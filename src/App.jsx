@@ -72,7 +72,7 @@ function App() {
             <li>
               <NavLink to='/shop'>Shop</NavLink>
             </li>
-            <li>
+            <li className="App--cart-link">
               <NavLink to='/cart'>
                 <i className='fa-solid fa-cart-shopping'></i> ({numberInCart()})
               </NavLink>
