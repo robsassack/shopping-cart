@@ -72,7 +72,7 @@ function App() {
             <li>
               <NavLink to='/shop'>Shop</NavLink>
             </li>
-            <li className="App--cart-link">
+            <li className='App--cart-link'>
               <NavLink to='/cart'>
                 <i className='fa-solid fa-cart-shopping'></i> ({numberInCart()})
               </NavLink>
@@ -100,6 +100,12 @@ function App() {
         />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <div className='App--footer'>
+        <a href="https://github.com/robsassack/shopping-cart">
+          <i className='fa-brands fa-github App--footer-repo'></i>
+        </a>
+        <p>Computer World &copy; {new Date().getFullYear()}</p>
+      </div>
     </div>
   );
 }
