@@ -6,7 +6,9 @@ function Home() {
 
   return (
     <div className="home">
-      <img src={photo} alt='Photo of Earth' className="home--image" />
+      <div className="home--image-container">
+        <img src={photo} alt='Photo of Earth' className="home--image" />
+      </div>
       <div className='home--text'>
         <h1>Welcome to Computer World!</h1>
         <p>All of the newest computer parts for the best prices!</p>
