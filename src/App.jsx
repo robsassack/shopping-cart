@@ -101,7 +101,7 @@ function App() {
         <Route path='*' element={<NotFound />} />
       </Routes>
       <div className='App--footer'>
-        <a href="https://github.com/robsassack/shopping-cart">
+        <a href="https://github.com/robsassack/shopping-cart" aria-label="GitHub repo link">
           <i className='fa-brands fa-github App--footer-repo'></i>
         </a>
         <p>Computer World &copy; {new Date().getFullYear()}</p>
