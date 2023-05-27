@@ -40,12 +40,17 @@ button:active {
   user-select: none;
 }
 
+.App--logo {
+  flex-grow: 1;
+}
+
 .App--navbar ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  row-gap: 15px;
+  column-gap: 40px;
   list-style: none;
 }
 
@@ -77,8 +82,8 @@ button:active {
   font-size: 1.3em;
 }
 
-.App--footer-repo:hover {
-  color: #b9b9b9;
+.App--logo>a:hover, .App--shop-link>a:hover, .App--cart-link>a:hover, .App--footer-repo:hover {
+  color: #b9b9b9 !important;
 }
 
 .home {

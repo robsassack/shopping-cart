@@ -61,23 +61,19 @@ function App() {
     <div className='App'>
       <nav className='App--navbar'>
         <ul>
-          <div className='App--logo'>
-            <li>
-              <NavLink to='/'>
-                <i className='fa-solid fa-globe'></i> Computer World
-              </NavLink>
-            </li>
-          </div>
-          <div className='App--links'>
-            <li>
-              <NavLink to='/shop'>Shop</NavLink>
-            </li>
-            <li className='App--cart-link'>
-              <NavLink to='/cart'>
-                <i className='fa-solid fa-cart-shopping'></i> ({numberInCart()})
-              </NavLink>
-            </li>
-          </div>
+          <li className='App--logo'>
+            <NavLink to='/'>
+              <i className='fa-solid fa-globe'></i> Computer World
+            </NavLink>
+          </li>
+          <li className='App--shop-link'>
+            <NavLink to='/shop'>Shop</NavLink>
+          </li>
+          <li className='App--cart-link'>
+            <NavLink to='/cart'>
+              <i className='fa-solid fa-cart-shopping'></i> ({numberInCart()})
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -101,7 +97,10 @@ function App() {
         <Route path='*' element={<NotFound />} />
       </Routes>
       <div className='App--footer'>
-        <a href="https://github.com/robsassack/shopping-cart" aria-label="GitHub repo link">
+        <a
+          href='https://github.com/robsassack/shopping-cart'
+          aria-label='GitHub repo link'
+        >
           <i className='fa-brands fa-github App--footer-repo'></i>
         </a>
         <p>Computer World &copy; {new Date().getFullYear()}</p>
